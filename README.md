@@ -129,13 +129,13 @@ pytest -q
 Сборка образа:
 
 ```bash
-docker build -t automl-breast-cancer .
+docker build -t automl-project .
 ```
 
 Запуск контейнера:
 
 ```bash
-docker run --rm automl-breast-cancer
+docker run --rm automl-project 
 ```
 
 Функции контейнеризации:
@@ -161,10 +161,9 @@ CI/CD реализован через GitHub Actions в файле `.github/work
 
 ```bash
 git init
-git checkout -b feature/automl-pipeline
 git add .
-git commit -m "Add automated ML pipeline"
-git push origin feature/automl-pipeline
+git commit -m ""
+git push
 ```
 
 Для командной работы используется Pull Request из отдельной ветки в `main`.
@@ -181,8 +180,6 @@ git push origin feature/automl-pipeline
 ```bash
 mlflow ui
 ```
-
-После запуска UI можно открыть веб-интерфейс и сделать скриншот метрик, времени обучения и параметров модели.
 
 ## 12. Структура проекта
 
